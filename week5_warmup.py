@@ -75,3 +75,6 @@ print(quote.find("moonlight"))
 phrase = "Supercalifragilisticexpialidocious" 
 print(len(phrase))
 print(phrase.find("i"))
+
+#Name: Vanessa Suarez, Malik Hreish 
+
