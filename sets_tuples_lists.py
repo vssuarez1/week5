@@ -3,12 +3,24 @@
 #set = {} unordered and immutable, but Add/Remove OK. NO duplicates
 #table = () ordered and unchangeable. Duplicates OK. FASTER 
 
-# fruits = ["apple", "orange", "banana","coconut","kiwi","strawberry"]
-# print(fruits[0])
+# fruits = ["apple", "orange", "banana","coconut","kiwi","strawberry"] #lists
+# fruits = {"apple","orange","banana","coconut"} #set
+# print(fruits)
+# #print(fruits[0]) #cannot do this with sets because unordered
+
+# #SETs
+# fruits.add("pineapple") 
+# fruits.add("kiwi")
+# fruits.remove("apple")
+# print(fruits)
+# fruits.pop () #pops off item at the end 
+# fruits.clear #clears
+# print(fruits)
 
 
-
-# #print(dir(fruits))
+#print(dir(fruits))
+#print(help(fruits))
+#print("pineapple" in fruits)
 # # print(len(fruits))
 # print(len(fruits)) 
 # print("pinaeapple" in fruits) #checks for pineapple in list: boolean value if it is true or not 
@@ -16,6 +28,8 @@
 # fruits[0] = "pineapple" #i can reassign values with this 
 # print(fruits)
 
+
+#LISTs
 # fruits.append("pineapple") #add elements to the list
 # #fruits.remove("apple") #removes elements 
 # fruits.insert(0, "pineapple") #
@@ -26,6 +40,20 @@
 
 # #for fruit in fruits:
 # #print(fruit)
+
+#TUPLEs
+#print(dir(fruits))
+#print(help(fruits))
+#print("pineapple" in fruits)
+# # print(len(fruits))
+# print(len(fruits)) 
+
+# print(fruits.index("apple")) 
+# fruits = ("apple","orange","banana","coconut")
+# print(fruits.count("coconut"))
+# for fruit in fruits:
+#     print(fruits)
+
 
 
 
@@ -64,20 +92,60 @@
    # if len(cars) > 10:
        # break
 
-friends = []
-addFriend = input("add a friend please: ")
-friends.append(addFriend)
-print(friends) 
-for friend in friends:
-    addFriend = input("add a friend please: ")
-    friends.append(addFriend)
-    print(friends)
-    if len(friends) > 6: 
-        break 
-friends.remove("idk")
-print(friends)
+# friends = []
+# addFriend = input("add a friend please: ")
+# friends.append(addFriend)
+# print(friends) 
+# for friend in friends:
+#     addFriend = input("add a friend please: ")
+#     friends.append(addFriend)
+#     print(friends)
+#     if len(friends) > 6: 
+#         break 
+# friends.remove("idk")
+# print(friends)
 
 
+#DICTIONARIES
+#dictionary = a collection of {key:value} pairs
+#                     ordered and changeable. No duplicates 
 
+capitals = {"USA":"Washington D.C.",
+            "India":"New Delhi",
+            "China":"Beijing",
+            "Russia":"Moscow"}
+
+# print(dir(capitals))
+# print(help(capitals))
+print(capitals.get("USA"))
+print(capitals.get("Japan"))
+if capitals.get("Japan"):
+    print("That capital exists")
+else:
+    print("That capital doesn't exist")
+
+
+capitals.update({"Germany":"Berlin"})
+print(capitals)
+capitals.update({"USA":"Detroit"})
+capitals.pop("China")
+capitals.popitem()
+capitals.clear
+
+keys = capitals.keys()
+
+print(keys)
+
+for key in capitals.keys():
+    print(key)
+
+values = capitals.values()
+for value in capitals.values():
+    print(values)
+
+items = capitals.items()
+print(items)
+for key, value in capitals.items():
+    print(f"{key}: {value}")
 
 
